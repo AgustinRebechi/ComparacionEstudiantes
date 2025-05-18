@@ -12,8 +12,7 @@ public class Main {
         estudiante[5] = new Estudiante("Josefa", 24);
 
         System.out.println(estudiante[2].equals(estudiante[3]));
-        System.out.println(estudiante[2] == estudiante[3])
-        ;
+        System.out.println(estudiante[2] == estudiante[3]);
 
     }
 }

@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class EstudianteGrado extends Estudiante{
     /**
      * Atributos
@@ -32,6 +34,13 @@ public class EstudianteGrado extends Estudiante{
         EstudianteGrado cast = (EstudianteGrado) otro; // cast que dice "trata este objeto como estudiante". Si otro no es realmente un Estudainte, lanzara una excepcion en tiempo de ejecucion
         return this.getMatricula() == cast.getMatricula()
                 && carreraGrado.equals(cast.carreraGrado); // cast es una referencia al mismo objeto que otro, pero ahora el compilador sabe que es de tipo Estudiante
+    }
+    /**
+     * Haschode
+     */
+    @Override
+    public int hashCode() {
+        return Objects.hash(getMatricula(), carreraGrado);
     }
 
 
